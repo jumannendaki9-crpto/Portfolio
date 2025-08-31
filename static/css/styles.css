@@ -1,0 +1,522 @@
+/* ===============================
+   Portfolio Homepage Styles
+   =============================== */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Navbar */
+.navbar {
+  transition: background-color 0.4s ease;
+}
+
+.navbar-dark.bg-dark {
+  background-color: #222 !important;
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .navbar-dark.bg-dark {
+  background-color: #1a1a1a !important;
+}
+
+.hero-section {
+  position: relative;
+  /* Use a light transparent overlay so black text is visible */
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+              url('../images/hero-bg.jpg') center/cover no-repeat;
+}
+
+.hero-section h1,
+.hero-section h4,
+.hero-section p,
+.hero-section .badge {
+  color: #000 !important; /* force black text */
+  text-shadow: none; /* remove shadows for crisp black text */
+}
+
+/* Typed text */
+.hero-section #typed {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000 !important;
+  text-shadow: none;
+}
+
+/* Buttons: keep as is or adjust to match black text style */
+.hero-section .btn-warning {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .btn-outline-light {
+  color: #000 !important;
+  border-color: #000 !important;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #000;
+  color: #fff !important;
+}
+
+
+body.dark-mode .hero-section {
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../images/hero-bg.jpg') center/cover no-repeat;
+}
+
+.hero-section h1,
+.hero-section h4,
+.hero-section p {
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+/* Badge */
+.badge.bg-warning {
+  font-weight: 600;
+  padding: 0.5em 1em;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn-warning {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-warning:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 193, 7, 0.6);
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+/* Lottie Player */
+lottie-player {
+  max-width: 100%;
+  height: auto;
+  max-height: 320px;
+}
+
+/* About Section */
+#about {
+  background-color: #f8f9fa;
+  color: #212529;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+body.dark-mode #about {
+  background-color: #1a1a1a;
+  color: #ddd;
+}
+
+#about ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#about ul li {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+
+#about ul li i {
+  margin-right: 0.7rem;
+}
+
+/* Projects Section */
+#projects {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #111;
+  color: #fff;
+}
+
+#projects .card {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+#projects .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.6);
+}
+
+body.dark-mode #projects {
+  background-color: #000;
+}
+
+/* Skills Section */
+#skills {
+  background-color: #f8f9fa;
+  color: #212529;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+body.dark-mode #skills {
+  background-color: #1a1a1a;
+  color: #ddd;
+}
+
+.progress {
+  height: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #e9ecef;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+  margin-bottom: 1.25rem;
+  transition: background-color 0.4s ease;
+}
+
+body.dark-mode .progress {
+  background-color: #333;
+}
+
+.progress-bar.bg-warning {
+  background-color: #ffc107;
+  transition: width 1s ease;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #111;
+  color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+body.dark-mode #contact {
+  background-color: #000;
+}
+
+#contact input,
+#contact textarea {
+  border-radius: 8px;
+  border: none;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode #contact input,
+body.dark-mode #contact textarea {
+  background-color: #333;
+  color: #eee;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #bbb;
+}
+
+#prototypes {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode #prototypes {
+  background-color: #1a1a1a;
+  color: #ddd;
+}
+
+/* Headings and text */
+#prototypes h2 {
+  color: #212529;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+body.dark-mode #prototypes h2 {
+  color: #fff;
+}
+
+#prototypes p {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+body.dark-mode #prototypes p {
+  color: #aaa;
+}
+
+/* Card Styles */
+#prototypes .card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  background-color: #fff;
+  text-decoration: none; /* remove text decoration */
+}
+
+body.dark-mode #prototypes .card {
+  background-color: #222;
+  color: #eee;
+}
+
+#prototypes .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.5);
+}
+
+/* Card Images Hover Effect */
+#prototypes .card img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Ensure h5 project titles have no text decoration */
+#prototypes .card-body h5 {
+  text-decoration: none !important; /* remove underline or other decorations */
+  color: inherit; /* keep text color consistent */
+}
+
+
+#prototypes .card img:hover {
+  transform: scale(1.05) rotate(1deg); /* subtle zoom and rotate */
+  filter: brightness(1.1);
+}
+
+/* Card Body */
+#prototypes .card-body h5 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+#prototypes .card-body p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+body.dark-mode #prototypes .card-body p {
+  color: #ccc;
+}
+
+/* Buttons */
+#prototypes .btn-outline-primary,
+#prototypes .btn-outline-success,
+#prototypes .btn-outline-warning {
+  border-width: 2px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+#prototypes .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+#prototypes .btn-outline-success:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+#prototypes .btn-outline-warning:hover {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+/* Links without underline */
+#prototypes a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#prototypes a:hover {
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  transition: background-color 0.4s ease;
+}
+
+body.dark-mode footer {
+  background-color: #111;
+}
+
+footer a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffc107;
+}
+
+/* Scroll-to-top Button */
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 2.5rem;
+  background: transparent;
+  border: none;
+  color: #ffc107;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  color: #fff;
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+  z-index: 1000;
+  background-color: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  transition: all 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  max-height: 50px;
+  object-fit: contain;
+  display: block;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* ============================
+   Responsive Adjustments
+============================ */
+
+/* Medium devices (tablets and below) */
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2.2rem !important;
+    text-align: center;
+  }
+  .hero-section h4,
+  .hero-section p {
+    text-align: center;
+  }
+  .hero-section .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .hero-section .btn + .btn {
+    margin-left: 0;
+  }
+  .hero-section .col-md-6 {
+    text-align: center;
+  }
+  lottie-player {
+    max-height: 260px !important;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.8rem !important;
+  }
+  .hero-section h4 {
+    font-size: 1.1rem !important;
+  }
+  .hero-section p {
+    font-size: 1rem !important;
+    padding: 0 1rem;
+  }
+  .badge.bg-warning {
+    font-size: 1rem;
+    padding: 0.4em 0.8em;
+  }
+  lottie-player {
+    max-height: 220px !important;
+  }
+  #about,
+  #skills,
+  #projects,
+  #contact {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+   #prototypes .card-body h5 {
+    font-size: 1rem;
+  }
+
+  #prototypes .card-body p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small devices (very narrow phones) */
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.5rem !important;
+  }
+  .hero-section h4 {
+    font-size: 1rem !important;
+  }
+  .hero-section p {
+    font-size: 0.95rem !important;
+  }
+  .hero-section .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+  lottie-player {
+    max-height: 200px !important;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+}
